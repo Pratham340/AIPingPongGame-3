@@ -1,0 +1,77 @@
+<html>
+
+<head>
+  <title>Login Page-AI Ping Pong</title>
+  <link rel="icon" href="295128_1_-removebg-preview.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<script src='https://www.google.com/recaptcha/api.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="form.css">
+  <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = '42531907fb33425900d8402a508b2235ef2177cf';
+  window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+    c.type='text/javascript';c.charset='utf-8';c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+  })(document);
+  </script>
+</head>
+
+<body background="https://i.pinimg.com/originals/58/1a/00/581a00fa93f3f43e2562ef54e89ab6e6.jpg">
+<center>
+<h1>Login Page</h1>
+<div id="formContainer">
+    <div id="header"></div>
+    <h4>Form</h4>
+    <input type="text" placeholder="Your name" id="email1" required/>
+    <button id="signIn" class="btn btn-primary" onclick="addUser();">Submit Name</button>
+    <input type="email" placeholder="Email" id="email" required/>
+    <input type="password" placeholder="Password" id="password" required/>
+
+    <button class="btn btn-primary" onclick="signUp()" id="signUp">Sign Up</button>
+    <button class="btn btn-success" onclick="signIn()" id="signIn">Sign In</button>
+    <button class="btn btn-danger" onclick="signOut()" id="signUp">Sign Out</button>
+    <br>
+    <img class="img-responsive" src="https://firebase.google.com/downloads/brand-guidelines/PNG/logo-built_black.png" style="width: 50%; margin-top:3px;">
+</div>
+<form method="post" onsubmit="return signIn();" required>
+  <div class="g-recaptcha" data-sitekey="6LdWCVoaAAAAAHAmYiuQ0_kjgbQvjeMl5DdJS6Tt" data-callback="verifyCaptcha" required></div>
+  <div id="g-recaptcha-error"></div>
+</form>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+</center>
+<div class="copy_right_footer">
+  <img class="img-responsive" style="width:4%;" ALIGN="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/1200px-RecaptchaLogo.svg.png">
+  <label style="font-family:'Monoton', cursive;">Developed By Pratham</label>
+</div>
+
+<script src="form.js"></script>
+<script>
+  $(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+  });
+</script>
+<script>
+   
+  function verifyCaptcha() {
+      document.getElementById('g-recaptcha-error').innerHTML = '';
+  }
+  </script>
+</body>
+
+</html>
